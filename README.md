@@ -16,7 +16,7 @@ This Electron application wraps a React application created with the create-reac
 ## Run
 To run on mac run /dist/asset-react-0.1.0.dmg
 
-##Build
+## Build
 First install the project using 
 - npm install
 
