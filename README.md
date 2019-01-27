@@ -4,6 +4,9 @@
 This Electron application wraps a React application created with the create-react-app starter.
 
 
+![application](https://raw.githubusercontent.com/antondb/javascript-test/master/img/app.png)
+![application with popup](https://raw.githubusercontent.com/antondb/javascript-test/master/img/app-video.png)
+
 ### Builds and features
 
 1. Search filter (video title)
