@@ -1,0 +1,48 @@
+{
+  "name": "asset-react",
+  "version": "0.1.0",
+  "private": true,
+  "main": "public/electron.js",
+  "author": "Anton De Blasio",
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
+    "electron-debug": "^2.0.0",
+    "electron-is-dev": "^1.0.1",
+    "electron-packager": "^13.0.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts": "2.1.3",
+    "wait-on": "^3.2.0"
+  },
+  "scripts": {
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test --env=jsdom",
+    "react-eject": "react-scripts eject",
+    "electron-build": "electron-builder -mwl",
+    "release": "npm run react-build && electron-builder -mlw --publish=always",
+    "build": "npm run react-build && npm run electron-build",
+    "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "build": {
+    "appId": "asset.test",
+    "mac": {
+      "category": "asset.test.app"
+    }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "homepage": "./",
+  "devDependencies": {
+    "electron": "^4.0.2",
+    "electron-builder": "^20.38.5"
+  }
+}
